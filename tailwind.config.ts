@@ -16,6 +16,9 @@ export default {
       fontFamily: {
         heading: ["var(--font-heading)", "Playfair Display", "serif"],
         body: ["var(--font-body)", "Be Vietnam Pro", "sans-serif"],
+        fredoka: ["Fredoka", "sans-serif"],
+        fredokaVN: ["FredokaVN", "sans-serif"],
+        spaceMono: ["Space Mono", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -30,6 +33,10 @@ export default {
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        yellowsecondary: {
+          DEFAULT: "hsl(var(--yellow-secondary))",
+          foreground: "hsl(var(--yellow-secondary-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -71,6 +78,16 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        hangman: {
+          stroke: "hsl(var(--hangman-stroke))",
+        },
+        letter: {
+          DEFAULT: "hsl(var(--letter-bg))",
+          hover: "hsl(var(--letter-hover))",
+          disabled: "hsl(var(--letter-disabled))",
+          correct: "hsl(var(--letter-correct))",
+          wrong: "hsl(var(--letter-wrong))",
         },
       },
       borderRadius: {

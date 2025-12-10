@@ -21,6 +21,12 @@ const buttonVariants = cva(
         quiz: "bg-card border-2 border-border text-foreground hover:border-primary hover:bg-secondary transition-all duration-200",
         quizCorrect: "bg-olive/10 border-2 border-olive text-olive",
         quizWrong: "bg-destructive/10 border-2 border-destructive text-destructive",
+        game: "bg-primary text-primary-foreground shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5 font-bold text-lg",
+        success: "bg-success text-success-foreground shadow-lg shadow-success/25 hover:bg-success/90",
+        letter: "bg-letter text-primary-foreground font-bold hover:bg-letter-hover shadow-md hover:shadow-lg hover:-translate-y-0.5",
+        letterCorrect: "bg-letter-correct text-primary-foreground font-bold shadow-md cursor-default",
+        letterWrong: "bg-letter-wrong text-primary-foreground font-bold shadow-md cursor-default",
+        letterDisabled: "bg-letter-disabled text-muted-foreground font-bold cursor-default opacity-60",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -28,6 +34,7 @@ const buttonVariants = cva(
         lg: "h-12 px-8 text-base",
         xl: "h-14 px-10 text-lg",
         icon: "h-10 w-10",
+        letter: "h-12 w-12 text-xl rounded-xl",
       },
     },
     defaultVariants: {
@@ -39,7 +46,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 

@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { path: "/", label: "Trang chủ", icon: BookOpen },
   { path: "/flipbook", label: "Flipbook", icon: Book },
-  { path: "/game", label: "Trò chơi", icon: Gamepad2 },
+  { path: "/hangman", label: "Trò chơi", icon: Gamepad2 },
 ];
 
 export function Header() {

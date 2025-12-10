@@ -18,7 +18,7 @@ const features = [
     icon: Gamepad2,
     title: "Trò Chơi Ôn Tập",
     description: "Học qua trò chơi quiz thú vị, ghi nhớ kiến thức nhanh chóng.",
-    link: "/game",
+    link: "/hangman",
     color: "bg-accent/20 text-accent-foreground",
   },
   {
@@ -98,7 +98,7 @@ export default function Index() {
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
-              <Link to="/game">
+              <Link to="/hangman">
                 <Button variant="heroOutline" size="xl">
                   Chơi trò chơi
                   <Gamepad2 className="w-5 h-5" />
@@ -221,7 +221,7 @@ export default function Index() {
                 Hãy bắt đầu hành trình khám phá lịch sử Việt Nam với phương pháp học tập thú vị và hiệu quả.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link to="/game">
+                <Link to="/hangman">
                   <Button variant="accent" size="xl">
                     Chơi trò chơi ngay
                     <Gamepad2 className="w-5 h-5" />
