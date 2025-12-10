@@ -1,0 +1,38 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)" opacity="0.9"/>
+  <rect width="1200" height="630" fill="#1e293b" opacity="0.7"/>
+  
+  <!-- Star (inspired by Vietnamese flag) -->
+  <polygon points="600,150 620,210 685,210 635,250 655,310 600,270 545,310 565,250 515,210 580,210" 
+           fill="#fbbf24" opacity="0.3" transform="scale(1.5) translate(-100, -50)"/>
+  
+  <!-- Title -->
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="56" font-weight="bold" 
+        fill="#ffffff" text-anchor="middle">
+    Lịch Sử Việt Nam 1975-1981
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="340" font-family="Arial, sans-serif" font-size="32" 
+        fill="#fbbf24" text-anchor="middle">
+    Xây dựng CNXH &amp; Bảo vệ Tổ quốc
+  </text>
+  
+  <!-- Description -->
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="24" 
+        fill="#cbd5e1" text-anchor="middle">
+    Học qua Flashcard và Trò chơi Quiz
+  </text>
+  
+  <!-- Decorative line -->
+  <line x1="400" y1="370" x2="800" y2="370" stroke="#fbbf24" stroke-width="2" opacity="0.5"/>
+</svg>
