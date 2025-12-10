@@ -6,7 +6,7 @@ export default function Flipbook() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       <Header />
-      
+
       <main className="container mx-auto px-4 pt-24 pb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,16 +30,17 @@ export default function Flipbook() {
             </p>
           </div>
 
-          <div className="bg-card rounded-2xl shadow-xl p-8 border border-border">
-            <div className="aspect-[4/3] bg-muted rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <Book className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground">
-                  Nội dung Flipbook sẽ được thêm vào đây
-                </p>
-              </div>
-            </div>
-          </div>
+          <iframe
+            title="Flipbook hướng dẫn"
+            src="https://publuu.com/flip-book/1029074/2275475/page/1?embed&transparent"
+            width="100%"
+            className="publuuflip h-[80vh]"
+            scrolling="no"
+            frameBorder="0"
+            allow="clipboard-write; autoplay; fullscreen"
+            allowFullScreen
+          ></iframe>
+
         </motion.div>
       </main>
     </div>
