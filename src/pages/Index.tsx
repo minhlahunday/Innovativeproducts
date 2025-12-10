@@ -7,13 +7,13 @@ import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-history.jpg";
 
 const features = [
-  {
-    icon: HelpCircle,
-    title: "Kho Câu Hỏi",
-    description: "Lưu trữ và quản lý các câu hỏi ôn tập theo từng chủ đề lịch sử.",
-    link: "/questions",
-    color: "bg-primary/10 text-primary",
-  },
+  // {
+  //   icon: HelpCircle,
+  //   title: "Kho Câu Hỏi",
+  //   description: "Lưu trữ và quản lý các câu hỏi ôn tập theo từng chủ đề lịch sử.",
+  //   link: "/questions",
+  //   color: "bg-primary/10 text-primary",
+  // },
   {
     icon: Gamepad2,
     title: "Trò Chơi Ôn Tập",
@@ -87,7 +87,7 @@ export default function Index() {
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-              Giai đoạn 1975 - 1981: Thống nhất đất nước, khắc phục hậu quả chiến tranh 
+              Giai đoạn 1975 - 1981: Thống nhất đất nước, khắc phục hậu quả chiến tranh
               và những bước đầu xây dựng chủ nghĩa xã hội trên cả nước.
             </p>
 
@@ -131,7 +131,7 @@ export default function Index() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-6"
+            className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto"
           >
             {features.map((feature, index) => (
               <motion.div key={index} variants={itemVariants}>
@@ -179,8 +179,12 @@ export default function Index() {
               { year: "1975", event: "Giải phóng miền Nam, thống nhất đất nước" },
               { year: "1976", event: "Tổng tuyển cử bầu Quốc hội chung, đổi tên nước thành CHXHCN Việt Nam" },
               { year: "1976-1980", event: "Thực hiện Kế hoạch 5 năm lần thứ nhất" },
+              { year: "1977", event: "Việt Nam gia nhập Liên Hợp Quốc" },
               { year: "1977-1979", event: "Chiến tranh bảo vệ biên giới Tây Nam" },
               { year: "1979", event: "Chiến tranh bảo vệ biên giới phía Bắc" },
+              { year: "1980", event: "Thông qua Hiến pháp 1980" },
+              { year: "1981", event: "Thành lập Hội đồng Bộ trưởng, bắt đầu khoán 100 trong nông nghiệp" },
+
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -190,7 +194,7 @@ export default function Index() {
                 transition={{ delay: index * 0.1 }}
                 className="flex gap-4 items-start"
               >
-                <div className="flex-shrink-0 w-20 h-20 rounded-xl bg-primary text-primary-foreground flex items-center justify-center font-heading font-bold text-lg">
+                <div className="flex-shrink-0 w-24 h-24 rounded-xl bg-primary text-primary-foreground flex items-center justify-center font-heading font-bold text-xl">
                   {item.year}
                 </div>
                 <Card variant="elevated" className="flex-1">
