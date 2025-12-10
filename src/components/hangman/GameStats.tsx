@@ -18,7 +18,7 @@ const GameStats = ({ lives, maxLives, score, streak }: GameStatsProps) => {
             <Heart
               key={i}
               className={cn(
-                "w-5 h-5 md:w-6 md:h-6 transition-all duration-300",
+                "w-5 h-5 md:w-6 md:h-6 transition-all duration-300 stroke-none",
                 i < lives
                   ? "fill-destructive text-destructive animate-pulse-glow"
                   : "text-muted-foreground/30"

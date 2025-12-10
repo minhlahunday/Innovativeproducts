@@ -130,7 +130,7 @@ const Game = () => {
           totalQuestions={totalQuestions}
           onPlayAgain={resetGame}
           onSaveScore={handleSaveScore}
-          onGoHome={() => navigate("/")}
+          onGoHome={() => navigate("/hangman")}
         />
       )}
     </div>

@@ -21,7 +21,7 @@ const LeaderboardPage = () => {
             <ArrowLeft className="w-5 h-5" />
             <span className="hidden sm:inline">Quay lại</span>
           </Button>
-          <h1 className="font-display text-2xl md:text-3xl font-bold text-primary">
+          <h1 className="font-fredokaVN text-2xl md:text-3xl font-bold text-primary">
             Bảng Xếp Hạng
           </h1>
           <Button

@@ -5,7 +5,7 @@ import { normalizeVietnamese } from "@/utils/normalize";  // adjust path nếu c
 const MAX_LIVES = 6;
 const BASE_POINTS = 100;
 const STREAK_MULTIPLIER = 50;
-const TOTAL_QUESTIONS = 15;
+const TOTAL_QUESTIONS = 2;
 
 export const useHangmanGame = () => {
   const [currentWord, setCurrentWord] = useState<WordData>(getRandomWord);

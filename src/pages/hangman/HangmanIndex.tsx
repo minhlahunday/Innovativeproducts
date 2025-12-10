@@ -33,13 +33,13 @@ const HangmanIndex = () => {
             <line x1="50" y1="160" x2="50" y2="20" className="stroke-hangman-stroke" strokeWidth="4" strokeLinecap="round" />
             <line x1="50" y1="20" x2="120" y2="20" className="stroke-hangman-stroke" strokeWidth="4" strokeLinecap="round" />
             <line x1="120" y1="20" x2="120" y2="40" className="stroke-hangman-stroke" strokeWidth="4" strokeLinecap="round" />
-            
+
             {/* Happy face */}
             <circle cx="120" cy="60" r="20" className="stroke-primary fill-none" strokeWidth="3" />
             <circle cx="113" cy="55" r="2" className="fill-primary" />
             <circle cx="127" cy="55" r="2" className="fill-primary" />
             <path d="M 112 68 Q 120 76 128 68" className="stroke-primary fill-none" strokeWidth="2" strokeLinecap="round" />
-            
+
             {/* Body */}
             <line x1="120" y1="80" x2="120" y2="120" className="stroke-primary" strokeWidth="3" strokeLinecap="round" />
             <line x1="120" y1="90" x2="100" y2="110" className="stroke-primary" strokeWidth="3" strokeLinecap="round" />
@@ -63,21 +63,22 @@ const HangmanIndex = () => {
 
           <div className="flex gap-4">
             <Button
-              variant="secondary"
+              variant="ghost"
               size="lg"
               onClick={() => navigate("/leaderboard")}
-              className="flex-1"
+              className="flex-1 bg-yellow-500 text-white text-lg font-bold"
             >
-              <Trophy className="w-5 h-5 mr-2" />
+              <Trophy className="w-5 h-5 mr-1" />
               Xếp hạng
             </Button>
+
             <Button
               variant="outline"
               size="lg"
               onClick={() => navigate("/how-to-play")}
-              className="flex-1"
+              className="flex-1 text-lg font-bold"
             >
-              <HelpCircle className="w-5 h-5 mr-2" />
+              <HelpCircle className="w-5 h-5 mr-1" />
               Hướng dẫn
             </Button>
           </div>
