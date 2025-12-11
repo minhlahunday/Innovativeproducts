@@ -6,7 +6,7 @@ import { useLeaderboard } from "@/hooks/useLeaderboard";
 
 const LeaderboardPage = () => {
   const navigate = useNavigate();
-  const { entries, clearLeaderboard } = useLeaderboard();
+  const { entries, clearAll } = useLeaderboard(); // dùng hàm clearAll mới
 
   return (
     <div className="min-h-screen p-4 md:p-6">
@@ -21,13 +21,15 @@ const LeaderboardPage = () => {
             <ArrowLeft className="w-5 h-5" />
             <span className="hidden sm:inline">Quay lại</span>
           </Button>
+
           <h1 className="font-fredokaVN text-2xl md:text-3xl font-bold text-primary">
             Bảng Xếp Hạng
           </h1>
+
           <Button
             variant="ghost"
             size="icon"
-            onClick={clearLeaderboard}
+            onClick={clearAll}
             className="text-destructive hover:text-destructive hover:bg-destructive/10"
             title="Xóa tất cả"
           >
