@@ -7,14 +7,28 @@ interface RoundResultModalProps {
   word: string;
   currentQuestion: number;
   totalQuestions: number;
+  earnedPoints: number;    // NEW
+  timeUsed: number;
   onNext: () => void;
 }
+
+const formatTimer = (timeMs: number) => {
+  const totalSeconds = Math.floor(timeMs / 1000);
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+
+  return `${minutes.toString().padStart(2, "0")}:${seconds
+    .toString()
+    .padStart(2, "0")}`;
+};
 
 const RoundResultModal = ({
   isWin,
   word,
   currentQuestion,
   totalQuestions,
+  earnedPoints, 
+  timeUsed,
   onNext,
 }: RoundResultModalProps) => {
   const isLastQuestion = currentQuestion >= totalQuestions;
@@ -44,11 +58,27 @@ const RoundResultModal = ({
             {isWin ? "Chính xác!" : "Không chính xác!"}
           </h2>
 
+          {/* Reveal score and time used if win */}
+          {isWin && (
+            <div className="bg-muted rounded-xl p-4 space-y-2">
+              <div className="flex justify-between">
+                <span className="text-muted-foreground text-sm">Điểm nhận được:</span>
+                <span className="font-bold text-primary text-lg">{earnedPoints}</span>
+              </div>
+
+              <div className="flex justify-between">
+                <span className="text-muted-foreground text-sm">Thời gian hoàn thành:</span>
+                <span className="font-bold text-primary text-lg">
+                  {formatTimer(timeUsed)}
+                </span>
+              </div>
+            </div>
+          )}
           {/* Word reveal */}
           {isWin && (
             <div className="bg-muted rounded-xl p-4">
               <p className="text-sm text-muted-foreground mb-1">Đáp án:</p>
-              <p className="font-fredokaVN font-display text-xl font-bold text-primary">{word}</p>
+              <p className="font-fredokaVN text-xl font-bold text-primary">{word}</p>
             </div>
           )}
 

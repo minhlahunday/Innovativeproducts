@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, MessageCircleQuestion } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HangmanDrawing from "@/components/hangman/HangmanDrawing";
 import WordDisplay from "@/components/hangman/WordDisplay";
@@ -22,6 +22,7 @@ const Game = () => {
     wrongGuesses,
     lives,
     maxLives,
+    timer,
     score,
     streak,
     currentQuestion,
@@ -64,6 +65,7 @@ const Game = () => {
           lives={lives}
           maxLives={maxLives}
           score={score}
+          timer={timer}
           streak={streak}
         />
 
@@ -118,6 +120,8 @@ const Game = () => {
           word={currentWord.word}
           currentQuestion={currentQuestion}
           totalQuestions={totalQuestions}
+          earnedPoints={score}   // từ hook
+          timeUsed={timer}                 // từ hook
           onNext={nextQuestion}
         />
       )}

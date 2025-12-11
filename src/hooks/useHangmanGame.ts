@@ -10,6 +10,7 @@ const TOTAL_QUESTIONS = 2;
 export const useHangmanGame = () => {
   const [currentWord, setCurrentWord] = useState<WordData>(getRandomWord);
   const [guessedLetters, setGuessedLetters] = useState<Set<string>>(new Set());
+  const [timer, setTimer] = useState(0);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(1);
@@ -43,7 +44,16 @@ export const useHangmanGame = () => {
 
   useEffect(() => {
     if (isWon && gameStatus === "playing") {
-      const points = BASE_POINTS + streak * STREAK_MULTIPLIER + lives * 20;
+      const timeInSeconds = timer / 1000;
+      const timeBonus = Math.max(0, Math.floor(50 - timeInSeconds));
+      // càng nhanh càng nhiều bonus, chậm quá = 0
+      const points =
+        BASE_POINTS +
+        streak * STREAK_MULTIPLIER +
+        lives * 20 +
+        timeBonus;
+
+      
       setScore((prev) => prev + points);
       setStreak((prev) => prev + 1);
       setCorrectAnswers((prev) => prev + 1);
@@ -52,11 +62,20 @@ export const useHangmanGame = () => {
       setStreak(0);
       setGameStatus("lost");
     }
+
+    if (gameStatus !== "playing") return;
+
+    const interval = setInterval(() => {
+      setTimer((t) => t + 10); // tăng mỗi 10ms
+    }, 10);
+
+    return () => clearInterval(interval);
+
   }, [isWon, isLost, gameStatus, streak, lives]);
 
   const guess = useCallback(
     (letter: string) => {
-          console.log(guessedLetters)
+      console.log(guessedLetters)
       if (gameStatus !== "playing" || guessedLetters.has(letter)) return;
       setGuessedLetters((prev) => new Set([...prev, letter]));
     },
@@ -70,6 +89,7 @@ export const useHangmanGame = () => {
       setCurrentWord(getRandomWord());
       setGuessedLetters(new Set());
       setCurrentQuestion((prev) => prev + 1);
+      setTimer(0);              // ← Reset Timer
       setGameStatus("playing");
     }
   }, [currentQuestion]);
@@ -81,6 +101,7 @@ export const useHangmanGame = () => {
     setStreak(0);
     setCurrentQuestion(1);
     setCorrectAnswers(0);
+    setTimer(0);                // ← Reset Timer
     setGameStatus("playing");
   }, []);
 
@@ -91,6 +112,7 @@ export const useHangmanGame = () => {
     wrongGuesses,
     lives,
     maxLives: MAX_LIVES,
+    timer,
     score,
     streak,
     currentQuestion,
