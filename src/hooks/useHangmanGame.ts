@@ -15,7 +15,7 @@ export const useHangmanGame = () => {
   const [streak, setStreak] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [correctAnswers, setCorrectAnswers] = useState(0);
-  const [gameStatus, setGameStatus] = useState<"playing" | "won" | "lost" | "finished">("playing");
+  const [gameStatus, setGameStatus] = useState<"loading" | "playing" | "won" | "lost" | "finished">("playing");
 
   // Khi lấy wordLetters: normalize từng ký tự
   const wordLetters = new Set(
@@ -53,7 +53,7 @@ export const useHangmanGame = () => {
         lives * 20 +
         timeBonus;
 
-      
+
       setScore((prev) => prev + points);
       setStreak((prev) => prev + 1);
       setCorrectAnswers((prev) => prev + 1);
@@ -85,13 +85,22 @@ export const useHangmanGame = () => {
   const nextQuestion = useCallback(() => {
     if (currentQuestion >= TOTAL_QUESTIONS) {
       setGameStatus("finished");
-    } else {
+      return;
+    }
+
+    // 1. Reset trạng thái trước
+    setGameStatus("loading");
+
+    // 2. Đợi 1 tick để tránh render nháy
+    setTimeout(() => {
       setCurrentWord(getRandomWord());
       setGuessedLetters(new Set());
       setCurrentQuestion((prev) => prev + 1);
-      setTimer(0);              // ← Reset Timer
+      setTimer(0); // reset timer
+
+      // 3. Bắt đầu câu mới
       setGameStatus("playing");
-    }
+    }, 0);
   }, [currentQuestion]);
 
   const resetGame = useCallback(() => {
