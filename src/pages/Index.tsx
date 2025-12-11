@@ -25,7 +25,7 @@ const features = [
     icon: BookOpen,
     title: "Flipbook",
     description: "Xem đáp án bằng cách lật thẻ, phương pháp học hiệu quả.",
-    link: "/questions",
+    link: "/flipbook",
     color: "bg-sage text-olive-dark",
   },
 ];
