@@ -95,7 +95,6 @@ export const useHangmanGame = () => {
   }, [remainingWords]);
 
   const nextQuestion = useCallback(() => {
-    console.log(remainingWords)
     if (currentQuestion >= TOTAL_QUESTIONS) {
       setGameStatus("finished");
       return;
