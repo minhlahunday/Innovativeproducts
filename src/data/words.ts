@@ -9,10 +9,10 @@ export const words: WordData[] = [
   { word: "VỊNH", hint: "Nơi biển lõm vào đất liền", category: "Địa lý" },
   { word: "BƯỚM", hint: "Côn trùng có cánh đẹp", category: "Động vật" },
   { word: "RỒNG", hint: "Sinh vật huyền thoại bay được", category: "Huyền thoại" },
-  { word: "CÁ VOI", hint: "Động vật có vú lớn nhất", category: "Động vật" },
-  { word: "VOI", hint: "Động vật có vòi dài", category: "Động vật" },
-  { word: "HỔ", hint: "Vua của rừng xanh", category: "Động vật" },
-  { word: "SƯ TỬ", hint: "Chúa tể thảo nguyên", category: "Động vật" },
+  // { word: "CÁ VOI", hint: "Động vật có vú lớn nhất", category: "Động vật" },
+  // { word: "VOI", hint: "Động vật có vòi dài", category: "Động vật" },
+  // { word: "HỔ", hint: "Vua của rừng xanh", category: "Động vật" },
+  // { word: "SƯ TỬ", hint: "Chúa tể thảo nguyên", category: "Động vật" },
   
   // // Thức ăn
   // { word: "PHỞ", hint: "Món ăn truyền thống Việt Nam", category: "Ẩm thực" },

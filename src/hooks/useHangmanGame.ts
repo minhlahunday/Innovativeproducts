@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
-import { getRandomWord, WordData } from "@/data/words";
+import { getRandomWord, WordData, words } from "@/data/words";
 import { normalizeVietnamese } from "@/utils/normalize";  // adjust path nếu cần
 
 const MAX_LIVES = 6;
@@ -16,6 +16,7 @@ export const useHangmanGame = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [gameStatus, setGameStatus] = useState<"loading" | "playing" | "won" | "lost" | "finished">("playing");
+  const [remainingWords, setRemainingWords] = useState<WordData[]>(words);
 
   // Khi lấy wordLetters: normalize từng ký tự
   const wordLetters = new Set(
@@ -75,36 +76,52 @@ export const useHangmanGame = () => {
 
   const guess = useCallback(
     (letter: string) => {
-      console.log(guessedLetters)
       if (gameStatus !== "playing" || guessedLetters.has(letter)) return;
       setGuessedLetters((prev) => new Set([...prev, letter]));
     },
     [gameStatus, guessedLetters]
   );
 
+  const getNextWord = useCallback(() => {
+    if (remainingWords.length === 0) return null;
+
+    const randomIndex = Math.floor(Math.random() * remainingWords.length);
+    const word = remainingWords[randomIndex];
+
+    // Xoá khỏi danh sách
+    setRemainingWords((prev) => prev.filter((_, i) => i !== randomIndex));
+
+    return word;
+  }, [remainingWords]);
+
   const nextQuestion = useCallback(() => {
+    console.log(remainingWords)
     if (currentQuestion >= TOTAL_QUESTIONS) {
       setGameStatus("finished");
       return;
     }
 
-    // 1. Reset trạng thái trước
     setGameStatus("loading");
 
-    // 2. Đợi 1 tick để tránh render nháy
     setTimeout(() => {
-      setCurrentWord(getRandomWord());
+      const next = getNextWord();
+      if (!next) return;
+
+      setCurrentWord(next);
       setGuessedLetters(new Set());
       setCurrentQuestion((prev) => prev + 1);
-      setTimer(0); // reset timer
-
-      // 3. Bắt đầu câu mới
+      setTimer(0);
       setGameStatus("playing");
+
     }, 0);
-  }, [currentQuestion]);
+  }, [currentQuestion, getNextWord]);
+
 
   const resetGame = useCallback(() => {
-    setCurrentWord(getRandomWord());
+    const first = words[Math.floor(Math.random() * words.length)];
+
+    setCurrentWord(first);
+    setRemainingWords(words.filter(w => w.word !== first.word));
     setGuessedLetters(new Set());
     setScore(0);
     setStreak(0);
