@@ -24,6 +24,7 @@ const Game = () => {
     lives,
     maxLives,
     timer,
+    totalTime,
     score,
     streak,
     currentQuestion,
@@ -36,7 +37,8 @@ const Game = () => {
   } = useHangmanGame();
 
   const handleSaveScore = (name: string) => {
-    addEntry(name, score);
+    console.log("Saving score:", { name, score, correctAnswers, totalQuestions, totalTime });
+    addEntry(name, score, correctAnswers, totalQuestions, totalTime);
   };
 
   useEffect(() => {

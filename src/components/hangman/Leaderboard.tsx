@@ -4,7 +4,10 @@ import { cn } from "@/lib/utils";
 export interface LeaderboardEntry {
   name: string;
   score: number;
-  date: string;
+  date: string; // Thời gian hoàn thành (mm:ss hoặc HH:mm:ss)
+  correctAnswers: number;
+  totalQuestions: number;
+  completionTime?: number; // Thời gian tính bằng milliseconds
 }
 
 interface LeaderboardProps {
@@ -67,7 +70,17 @@ const Leaderboard = ({ entries }: LeaderboardProps) => {
           </div>
           <div className="flex-1 min-w-0">
             <p className="font-display font-bold truncate">{entry.name}</p>
-            <p className="text-xs text-muted-foreground">{entry.date}</p>
+            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+              <span className="font-mono">{entry.date}</span>
+              {entry.totalQuestions > 0 && (
+                <>
+                  <span>•</span>
+                  <span className="font-medium">
+                    {entry.correctAnswers}/{entry.totalQuestions} ({((entry.correctAnswers / entry.totalQuestions) * 100).toFixed(0)}%)
+                  </span>
+                </>
+              )}
+            </div>
           </div>
           <div className="flex-shrink-0">
             <span className="font-mono font-bold text-lg text-primary">{entry.score}</span>

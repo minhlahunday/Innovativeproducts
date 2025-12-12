@@ -21,7 +21,17 @@ export const useLeaderboard = () => {
       const q = query(colRef, orderBy("score", "desc"));
       const snapshot = await getDocs(q);
 
-      const list = snapshot.docs.map((d) => d.data() as LeaderboardEntry);
+      const list = snapshot.docs.map((d) => {
+        const data = d.data();
+        return {
+          name: data.name || "Unknown",
+          score: data.score || 0,
+          date: data.date || "",
+          correctAnswers: data.correctAnswers ?? 0,
+          totalQuestions: data.totalQuestions ?? 0,
+          completionTime: data.completionTime ?? 0,
+        } as LeaderboardEntry;
+      });
       setEntries(list);
     };
 
@@ -29,11 +39,22 @@ export const useLeaderboard = () => {
   }, []);
 
   // Add new entry
-  const addEntry = async (name: string, score: number) => {
+  const addEntry = async (name: string, score: number, correctAnswers: number = 0, totalQuestions: number = 0, completionTime: number = 0) => {
+    const now = new Date();
     const newEntry: LeaderboardEntry = {
       name,
       score,
-      date: new Date().toLocaleDateString("vi-VN"),
+      date: now.toLocaleString("vi-VN", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+      }),
+      correctAnswers,
+      totalQuestions,
+      completionTime,
     };
 
     await addDoc(colRef, newEntry);
