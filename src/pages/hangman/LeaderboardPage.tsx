@@ -25,7 +25,7 @@ const LeaderboardPage = () => {
           <h1 className="font-fredokaVN text-2xl md:text-3xl font-bold text-primary">
             Bảng Xếp Hạng
           </h1>
-
+{/* 
           <Button
             variant="ghost"
             size="icon"
@@ -34,7 +34,7 @@ const LeaderboardPage = () => {
             title="Xóa tất cả"
           >
             <Trash2 className="w-5 h-5" />
-          </Button>
+          </Button> */}
         </header>
 
         {/* Leaderboard Card */}

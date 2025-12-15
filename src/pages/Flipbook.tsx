@@ -30,9 +30,10 @@ export default function Flipbook() {
             </p>
           </div>
 
+
           <iframe
             title="Flipbook hướng dẫn"
-            src="https://publuu.com/flip-book/1029074/2275475/page/1?embed&transparent"
+            src="https://publuu.com/flip-book/1029074/2283147/page/1?embed&transparent"
             width="100%"
             className="publuuflip h-[80vh]"
             scrolling="no"
