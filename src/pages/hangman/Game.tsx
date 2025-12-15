@@ -93,7 +93,7 @@ const Game = () => {
           {/* Hint */}
           <div className="flex items-center justify-center gap-2 bg-muted rounded-xl px-4 py-3">
             <p className="text-center">
-              <span className="font-fredokaVN font-bold text-red-500 text-xl">Câu hỏi: </span>
+              <span className="font-fredokaVN font-bold text-red-500 text-xl">Hint: </span>
               <span className="font-medium text-xl">{currentWord.hint}</span>
             </p>
           </div>
