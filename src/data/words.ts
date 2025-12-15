@@ -5,64 +5,142 @@ export interface WordData {
 }
 
 export const words: WordData[] = [
-  // Động vật
+
+  /* =========================
+     I. THỐNG NHẤT ĐẤT NƯỚC
+     ========================= */
+  // 1 (GỐC)
   { word: "TRƯỜNG CHINH", hint: "Trưởng đoàn đại biểu miền Bắc tại Hội nghị Hiệp thương chính trị 1975", category: "Lịch sử" },
-  { word: "TỔNG TUYỂN CỬ", hint: "Sự kiện ngày 25/4/1976 với hơn 23 triệu cử tri tham gia", category: "Lịch sử" },
-  { word: "KHOA HỌC KỸ THUẬT", hint: "Đại hội IV xác định cuộc cách mạng nào giữ vai trò then chốt?'", category: "Chính trị" },
-  { word: "TRUNG QUỐC", hint: "Quốc gia nào đã huy động 60 vạn quân tấn công biên giới phía Bắc Việt Nam năm 1979?", category: "Lịch sử" },
-  { word: "CÔNG NGHIỆP HÓA", hint: "Tại Đại hội IV, Đảng xác định nhiệm vụ trung tâm của cả thời kỳ quá độ là gì?", category: "Chính trị" },
-  { word: "LIÊN XÔ", hint: "Ngoài Lào và Campuchia, Đại hội IV chủ trương đẩy mạnh hợp tác với nước lớn nào?", category: "Quốc tế" },
-  { word: "TÂY NGUYÊN", hint: " Tổ chức FULRO vũ trang hoạt động chống phá ở khu vực nào của nước ta?", category: "Địa lý–Lịch sử" },
-  { word: "ĐẢNG CỘNG SẢN VIỆT NAM", hint: "Tên mới của Đảng Lao động Việt Nam theo Đại hội IV (1976)", category: "Chính trị" },
+  // 2 (GỐC)
   { word: "PHẠM HÙNG", hint: "Trưởng đoàn đại biểu miền Nam tại Hội nghị Hiệp thương chính trị 1975", category: "Lịch sử" },
-  { word: "PHẠM VĂN ĐỒNG", hint: "Ai được Quốc hội bầu làm Thủ tướng Chính phủ của nước Việt Nam thống nhất (1976)?", category: "Lịch sử" },
+  // 3 (GỐC)
   { word: "SÀI GÒN", hint: "Địa điểm tổ chức Hội nghị Hiệp thương chính trị 11/1975", category: "Địa lý" },
-  { word: "BA", hint: "Số cuộc cách mạng cần tiến hành đồng thời theo Đại hội IV", category: "Chính trị" },
-  { word: "NGUYỄN HỮU THỌ", hint: "Cùng với Nguyễn Lương Bằng, ai được bầu làm Phó Chủ tịch nước năm 1976?", category: "Lịch sử" },
-  { word: "TIẾN QUÂN CA", hint: "Tên bài hát được chọn làm Quốc ca", category: "Văn hóa" },
+  // 4 (GỐC)
+  { word: "TỔNG TUYỂN CỬ", hint: "Sự kiện ngày 25/4/1976 với hơn 23 triệu cử tri tham gia", category: "Lịch sử" },
+  // 5 (GỐC)
   { word: "KÍN", hint: "Một trong các nguyên tắc bầu cử của Tổng tuyển cử năm 1976", category: "Chính trị" },
+  // 6
+  { word: "PHỔ THÔNG", hint: "Nguyên tắc bầu cử mọi công dân đủ điều kiện đều được tham gia", category: "Chính trị" },
+  // 7
+  { word: "BÌNH ĐẲNG", hint: "Nguyên tắc bầu cử không phân biệt giai cấp, dân tộc", category: "Chính trị" },
+  // 8
+  { word: "TRỰC TIẾP", hint: "Nguyên tắc cử tri tự mình bỏ phiếu", category: "Chính trị" },
+
+  /* =========================
+     II. NHÀ NƯỚC THỐNG NHẤT
+     ========================= */
+
+  // 9 (GỐC)
+  { word: "PHẠM VĂN ĐỒNG", hint: "Ai được Quốc hội bầu làm Thủ tướng Chính phủ của nước Việt Nam thống nhất (1976)?", category: "Lịch sử" },
+  // 10 (GỐC)
+  { word: "NGUYỄN HỮU THỌ", hint: "Cùng với Nguyễn Lương Bằng, ai được bầu làm Phó Chủ tịch nước năm 1976?", category: "Lịch sử" },
+  // 11
+  { word: "TÔN ĐỨC THẮNG", hint: "Chủ tịch nước Việt Nam thống nhất được bầu năm 1976", category: "Lịch sử" },
+  // 12
+  { word: "HÀ NỘI", hint: "Thủ đô của nước Việt Nam thống nhất từ năm 1976", category: "Địa lý" },
+  // 13 (GỐC)
+  { word: "TIẾN QUÂN CA", hint: "Tên bài hát được chọn làm Quốc ca", category: "Văn hóa" },
+  // 14
+  { word: "TP HỒ CHÍ MINH", hint: "Tên mới của Sài Gòn sau khi đất nước thống nhất", category: "Địa lý" },
+
+  /* =========================
+     III. ĐẠI HỘI IV – ĐƯỜNG LỐI
+     ========================= */
+
+  // 15 (GỐC)
+  { word: "ĐẢNG CỘNG SẢN VIỆT NAM", hint: "Tên mới của Đảng Lao động Việt Nam theo Đại hội IV (1976)", category: "Chính trị" },
+  // 16
+  { word: "ĐẠI HỘI IV", hint: "Đại hội đại biểu toàn quốc họp tháng 12 năm 1976", category: "Chính trị" },
+  // 17
+  { word: "LÊ DUẨN", hint: "Tổng Bí thư được bầu tại Đại hội IV", category: "Lịch sử" },
+  // 18 (GỐC)
+  { word: "BA", hint: "Số cuộc cách mạng cần tiến hành đồng thời theo Đại hội IV", category: "Chính trị" },
+  // 19 (GỐC)
+  { word: "KHOA HỌC KỸ THUẬT", hint: "Đại hội IV xác định cuộc cách mạng nào giữ vai trò then chốt?", category: "Chính trị" },
+  // 20 (GỐC)
+  { word: "CÔNG NGHIỆP HÓA", hint: "Tại Đại hội IV, Đảng xác định nhiệm vụ trung tâm của cả thời kỳ quá độ là gì?", category: "Chính trị" },
+  // 21
+  { word: "QUAN HỆ SẢN XUẤT", hint: "Một trong ba cuộc cách mạng theo Đại hội IV", category: "Kinh tế" },
+  // 22
+  { word: "TƯ TƯỞNG VĂN HÓA", hint: "Một trong ba cuộc cách mạng được xác định tại Đại hội IV", category: "Văn hóa" },
+
+  /* =========================
+     IV. KINH TẾ – KẾ HOẠCH
+     ========================= */
+
+  // 23
+  { word: "KẾ HOẠCH 5 NĂM", hint: "Chiến lược phát triển kinh tế – xã hội 1976–1980", category: "Kinh tế" },
+  // 24
+  { word: "ĐỜI SỐNG NHÂN DÂN", hint: "Mục tiêu cấp bách hàng đầu của kế hoạch 5 năm", category: "Kinh tế" },
+  // 25
+  { word: "TÍCH LŨY", hint: "Mục tiêu xây dựng cơ sở vật chất – kỹ thuật CNXH", category: "Kinh tế" },
+  // 26
+  { word: "CÔNG NGHIỆP NẶNG", hint: "Ngành được ưu tiên phát triển theo đường lối Đại hội IV", category: "Kinh tế" },
+  // 27
+  { word: "HỘI NGHỊ TRUNG ƯƠNG VI", hint: "Bước đột phá tư duy kinh tế của Đảng năm 1979", category: "Chính trị" },
+  // 28
+  { word: "CHỈ THỊ 100", hint: "Văn bản khoán sản phẩm trong nông nghiệp năm 1981", category: "Kinh tế" },
+
+  /* =========================
+     V. BẢO VỆ TỔ QUỐC
+     ========================= */
+
+  // 29 (GỐC)
   { word: "FULRO", hint: "Lực lượng phản động vũ trang bị quân dân ta đánh bại ở Tây Nguyên", category: "Lịch sử" },
-  { word: "DIỆT CHỦNG", hint: "Chính sách tàn bạo của tập đoàn Pôn Pốt ở Campuchia", category: "Lịch sử quốc tế" }
-  // { word: "CÁ VOI", hint: "Động vật có vú lớn nhất", category: "Động vật" },
-  // { word: "VOI", hint: "Động vật có vòi dài", category: "Động vật" },
-  // { word: "HỔ", hint: "Vua của rừng xanh", category: "Động vật" },
-  // { word: "SƯ TỬ", hint: "Chúa tể thảo nguyên", category: "Động vật" },
-  
-  // // Thức ăn
-  // { word: "PHỞ", hint: "Món ăn truyền thống Việt Nam", category: "Ẩm thực" },
-  // { word: "BÁNH MÌ", hint: "Thức ăn nhanh Việt Nam nổi tiếng", category: "Ẩm thực" },
-  // { word: "BÚN CHẢ", hint: "Đặc sản Hà Nội", category: "Ẩm thực" },
-  // { word: "GỎI CUỐN", hint: "Món cuốn tươi ngon", category: "Ẩm thực" },
-  
-  // // Địa danh
-  // { word: "HÀ NỘI", hint: "Thủ đô Việt Nam", category: "Địa danh" },
-  // { word: "SÀI GÒN", hint: "Thành phố lớn nhất phía Nam", category: "Địa danh" },
-  // { word: "ĐÀ NẴNG", hint: "Thành phố đáng sống", category: "Địa danh" },
-  // { word: "HỘI AN", hint: "Phố cổ nổi tiếng", category: "Địa danh" },
-  // { word: "HẠ LONG", hint: "Vịnh di sản thế giới", category: "Địa danh" },
-  
-  // // Thiên nhiên
-  // { word: "CẦU VỒNG", hint: "Hiện tượng sau mưa", category: "Thiên nhiên" },
-  // { word: "MẶT TRỜI", hint: "Ngôi sao của hệ mặt trời", category: "Thiên nhiên" },
-  // { word: "MẶT TRĂNG", hint: "Vệ tinh tự nhiên của Trái Đất", category: "Thiên nhiên" },
-  // { word: "BIỂN", hint: "Nơi có nước mặn rộng lớn", category: "Thiên nhiên" },
-  // { word: "NÚI", hint: "Địa hình cao nhô lên", category: "Thiên nhiên" },
-  
-  // // Đồ vật
-  // { word: "ĐIỆN THOẠI", hint: "Thiết bị liên lạc cầm tay", category: "Công nghệ" },
-  // { word: "MÁY TÍNH", hint: "Thiết bị xử lý thông tin", category: "Công nghệ" },
-  // { word: "TIVI", hint: "Thiết bị giải trí trong nhà", category: "Công nghệ" },
-  
-  // // Nghề nghiệp
-  // { word: "BÁC SĨ", hint: "Người chữa bệnh", category: "Nghề nghiệp" },
-  // { word: "GIÁO VIÊN", hint: "Người dạy học", category: "Nghề nghiệp" },
-  // { word: "KỸ SƯ", hint: "Người thiết kế và xây dựng", category: "Nghề nghiệp" },
-  
-  // // Thể thao
-  // { word: "BÓNG ĐÁ", hint: "Môn thể thao vua", category: "Thể thao" },
-  // { word: "CẦU LÔNG", hint: "Môn thể thao dùng vợt và cầu", category: "Thể thao" },
-  // { word: "BƠI LỘI", hint: "Môn thể thao dưới nước", category: "Thể thao" },
+  // 30 (GỐC)
+  { word: "TÂY NGUYÊN", hint: "Tổ chức FULRO vũ trang hoạt động chống phá ở khu vực nào của nước ta?", category: "Địa lý–Lịch sử" },
+  // 31 (GỐC)
+  { word: "DIỆT CHỦNG", hint: "Chính sách tàn bạo của tập đoàn Pôn Pốt ở Campuchia", category: "Lịch sử quốc tế" },
+  // 32
+  { word: "POL POT", hint: "Kẻ đứng đầu chế độ diệt chủng Campuchia", category: "Lịch sử quốc tế" },
+  // 33
+  { word: "BIÊN GIỚI TÂY NAM", hint: "Hướng chiến tranh bảo vệ Tổ quốc chống Khmer Đỏ", category: "Lịch sử" },
+  // 34
+  { word: "PHNOM PENH", hint: "Thủ đô Campuchia được giải phóng ngày 7/1/1979", category: "Địa lý" },
+  // 35
+  { word: "QUÂN TÌNH NGUYỆN", hint: "Lực lượng Việt Nam giúp Campuchia thoát nạn diệt chủng", category: "Lịch sử" },
+
+  /* =========================
+     VI. QUỐC TẾ – CẤM VẬN
+     ========================= */
+
+  // 36 (GỐC)
+  { word: "TRUNG QUỐC", hint: "Quốc gia nào đã huy động 60 vạn quân tấn công biên giới phía Bắc Việt Nam năm 1979?", category: "Lịch sử" },
+  // 37
+  { word: "BIÊN GIỚI PHÍA BẮC", hint: "Chiến tranh bảo vệ Tổ quốc năm 1979", category: "Lịch sử" },
+  // 38 (GỐC)
+  { word: "LIÊN XÔ", hint: "Ngoài Lào và Campuchia, Đại hội IV chủ trương đẩy mạnh hợp tác với nước lớn nào?", category: "Quốc tế" },
+  // 39
+  { word: "ASEAN", hint: "Tổ chức khu vực lên án Việt Nam năm 1979", category: "Quốc tế" },
+  // 40
+  { word: "LIÊN HỢP QUỐC", hint: "Tổ chức thông qua nghị quyết lên án Việt Nam năm 1979", category: "Quốc tế" },
+  // 41
+  { word: "NGHỊ QUYẾT 34 22", hint: "Nghị quyết yêu cầu Việt Nam rút quân khỏi Campuchia", category: "Quốc tế" },
+  // 42
+  { word: "CẤM VẬN", hint: "Chính sách của Mỹ và phương Tây với Việt Nam sau 1975", category: "Quốc tế" },
+
+  /* =========================
+     VII. ĐÁNH GIÁ – Ý NGHĨA
+     ========================= */
+
+  // 43
+  { word: "CHIẾN TRANH LẠNH", hint: "Bối cảnh quốc tế chi phối việc lên án Việt Nam", category: "Quốc tế" },
+  // 44
+  { word: "TỰ VỆ", hint: "Tính chất cuộc chiến tranh bảo vệ biên giới của Việt Nam", category: "Lịch sử" },
+  // 45
+  { word: "NHÂN ĐẠO", hint: "Ý nghĩa việc Việt Nam giúp chấm dứt chế độ diệt chủng", category: "Lịch sử quốc tế" },
+  // 46
+  { word: "CHÍNH NGHĨA", hint: "Bản chất cuộc chiến tranh biên giới Tây Nam", category: "Lịch sử" },
+  // 47
+  { word: "RÚT QUÂN 1989", hint: "Thời điểm Việt Nam hoàn thành nghĩa vụ quốc tế tại Campuchia", category: "Lịch sử" },
+  // 48
+  { word: "HIỂU LẦM LỊCH SỬ", hint: "Cách quốc tế nhìn nhận sai về Việt Nam giai đoạn 1979", category: "Nhận định" },
+  // 49
+  { word: "ỔN ĐỊNH KHU VỰC", hint: "Hệ quả lâu dài của việc chấm dứt chế độ Pol Pot", category: "Quốc tế" },
+  // 50
+  { word: "BÀI HỌC ĐỐI NGOẠI", hint: "Kinh nghiệm rút ra từ thời kỳ bị bao vây cấm vận", category: "Chính trị" }
 ];
+
 
 export const getRandomWord = (): WordData => {
   return words[Math.floor(Math.random() * words.length)];
