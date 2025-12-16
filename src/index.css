@@ -167,10 +167,14 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground font-body antialiased;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
 
   h1,
@@ -259,6 +263,12 @@
 
   .animate-fade-in {
     animation: fadeIn 0.3s ease-out;
+  }
+
+  /* Responsive utilities */
+  .safe-area {
+    padding-left: max(env(safe-area-inset-left), 1rem);
+    padding-right: max(env(safe-area-inset-right), 1rem);
   }
 
   @keyframes float {

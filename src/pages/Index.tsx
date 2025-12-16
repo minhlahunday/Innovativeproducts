@@ -51,8 +51,8 @@ export default function Index() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-16">
-        <div className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="pt-16 pb-8">
+        <div className="relative min-h-[500px] sm:min-h-[600px] md:h-[80vh] flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
@@ -68,7 +68,7 @@ export default function Index() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative z-10 text-center px-4 max-w-4xl mx-auto"
+            className="relative z-10 text-center px-4 sm:px-6 py-8 max-w-4xl mx-auto"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -80,13 +80,13 @@ export default function Index() {
               <span className="text-sm font-medium">Ôn tập Lịch Sử Việt Nam</span>
             </motion.div>
 
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-              <span className="whitespace-nowrap inline-block mb-2">Xây dựng Chủ nghĩa Xã hội</span>
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
+              <span className="inline-block mb-2">Xây dựng Chủ nghĩa Xã hội</span>
               <br />
               <span className="text-gradient">& Bảo vệ Tổ quốc</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-2">
               Giai đoạn 1975 - 1981: Thống nhất đất nước, khắc phục hậu quả chiến tranh
               và những bước đầu xây dựng chủ nghĩa xã hội trên cả nước.
             </p>
@@ -110,7 +110,7 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 md:py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -161,7 +161,7 @@ export default function Index() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 px-4 bg-secondary/30">
+      <section className="py-12 sm:py-16 md:py-20 px-4 bg-secondary/30">
         <div className="container mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -192,14 +192,14 @@ export default function Index() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex gap-4 items-start"
+                className="flex gap-2 sm:gap-4 items-start"
               >
-                <div className="flex-shrink-0 w-24 h-24 rounded-xl bg-primary text-primary-foreground flex items-center justify-center font-heading font-bold text-xl">
+                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg sm:rounded-xl bg-primary text-primary-foreground flex items-center justify-center font-heading font-bold text-sm sm:text-base md:text-xl">
                   {item.year}
                 </div>
-                <Card variant="elevated" className="flex-1">
-                  <CardContent className="p-4">
-                    <p className="text-foreground">{item.event}</p>
+                <Card variant="elevated" className="flex-1 min-w-0">
+                  <CardContent className="p-3 sm:p-4">
+                    <p className="text-sm sm:text-base text-foreground break-words">{item.event}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -209,7 +209,7 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 md:py-20 px-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -217,11 +217,11 @@ export default function Index() {
           className="container mx-auto max-w-4xl"
         >
           <Card variant="feature" className="overflow-hidden">
-            <div className="hero-gradient p-8 sm:p-12 text-center text-primary-foreground">
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
+            <div className="hero-gradient p-6 sm:p-8 md:p-12 text-center text-primary-foreground">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
                 Sẵn sàng ôn tập?
               </h2>
-              <p className="text-primary-foreground/80 text-lg mb-8 max-w-xl mx-auto">
+              <p className="text-primary-foreground/80 text-base sm:text-lg mb-6 sm:mb-8 max-w-xl mx-auto px-4">
                 Hãy bắt đầu hành trình khám phá lịch sử Việt Nam với phương pháp học tập thú vị và hiệu quả.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
