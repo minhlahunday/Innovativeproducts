@@ -68,8 +68,7 @@ export const words: WordData[] = [
      IV. KINH TẾ – KẾ HOẠCH
      ========================= */
 
-  // 23
-  { word: "KẾ HOẠCH 5 NĂM", hint: "Chiến lược phát triển kinh tế – xã hội 1976–1980", category: "Kinh tế" },
+  
   // 24
   { word: "ĐỜI SỐNG NHÂN DÂN", hint: "Mục tiêu cấp bách hàng đầu của kế hoạch 5 năm", category: "Kinh tế" },
   // 25
@@ -79,7 +78,7 @@ export const words: WordData[] = [
   // 27
   { word: "HỘI NGHỊ TRUNG ƯƠNG VI", hint: "Bước đột phá tư duy kinh tế của Đảng năm 1979", category: "Chính trị" },
   // 28
-  { word: "CHỈ THỊ 100", hint: "Văn bản khoán sản phẩm trong nông nghiệp năm 1981", category: "Kinh tế" },
+  
 
   /* =========================
      V. BẢO VỆ TỔ QUỐC
@@ -115,7 +114,7 @@ export const words: WordData[] = [
   // 40
   { word: "LIÊN HỢP QUỐC", hint: "Tổ chức thông qua nghị quyết lên án Việt Nam năm 1979", category: "Quốc tế" },
   // 41
-  { word: "NGHỊ QUYẾT 34 22", hint: "Nghị quyết yêu cầu Việt Nam rút quân khỏi Campuchia", category: "Quốc tế" },
+ 
   // 42
   { word: "CẤM VẬN", hint: "Chính sách của Mỹ và phương Tây với Việt Nam sau 1975", category: "Quốc tế" },
 
@@ -132,8 +131,7 @@ export const words: WordData[] = [
   // 46
   { word: "CHÍNH NGHĨA", hint: "Bản chất cuộc chiến tranh biên giới Tây Nam", category: "Lịch sử" },
   // 47
-  { word: "RÚT QUÂN 1989", hint: "Thời điểm Việt Nam hoàn thành nghĩa vụ quốc tế tại Campuchia", category: "Lịch sử" },
-  // 48
+ 
   { word: "HIỂU LẦM LỊCH SỬ", hint: "Cách quốc tế nhìn nhận sai về Việt Nam giai đoạn 1979", category: "Nhận định" },
   // 49
   { word: "ỔN ĐỊNH KHU VỰC", hint: "Hệ quả lâu dài của việc chấm dứt chế độ Pol Pot", category: "Quốc tế" },
