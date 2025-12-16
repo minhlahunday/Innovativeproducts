@@ -23,11 +23,11 @@ export default function Flipbook() {
               <Book className="w-8 h-8 text-primary-foreground" />
             </motion.div>
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
-              Flipbook Lịch Sử Việt Nam
+              Flipbook Xây dựng Chủ nghĩa Xã hội và Bảo vệ Tổ quốc
             </h1>
-            <p className="text-lg text-muted-foreground">
+            {/* <p className="text-lg text-muted-foreground">
               Khám phá lịch sử Việt Nam qua các trang sách tương tác
-            </p>
+            </p> */}
           </div>
 
 
